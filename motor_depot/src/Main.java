@@ -9,11 +9,20 @@ public class Main {
         Driver driver = new Driver("Timofei", "5");
         System.out.println(d.getName());
 
-        v.print_info_voyage();
+        v.printInfoVoyage();
 
         d.setVoyageDriver(v,driver);
 
-        v.print_info_voyage();
+        v.printInfoVoyage();
+
+        d.setVoyageCar(v,car);
+
+        v.printInfoVoyage();
+
+        driver.infoDriver();
+
+        driver.voyageSuccess(v);
+        driver.requestFixCar(car);
 
     }
 }

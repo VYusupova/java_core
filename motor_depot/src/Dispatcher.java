@@ -3,8 +3,13 @@ public class Dispatcher {
     private int num;
 
     Dispatcher(){
-        this.name = "name";
-        this.num = 123;
+        this.name = "No_name";
+        this.num = 0;
+    }
+
+    Dispatcher(String name, int num){
+        this.name = name;
+        this.num = num;
     }
 
     public int getNum() {
@@ -25,10 +30,15 @@ public class Dispatcher {
 
     public void setVoyageDriver(Voyage v, Driver d){
         v.numDriver = d.getNum();
-        d.num_voyage = v.getNumber_voyage();
+        d.numVoyage = v.getNumberVoyage();
     }
     public void setVoyageCar(Voyage v, Car c){
-        v.numDriver = c.getNumber_car();
-        c.num_voyage = v.getNumber_voyage();
+        v.numCar = c.getNumberCar();
+        c.numVoyage = v.getNumberVoyage();
+        if (!v.numDriver.isEmpty()) c.numDriver = v.numDriver;
+    }
+
+    private void driverNotWork(Driver d){
+        d.driverIsWork = false;
     }
 }

@@ -1,15 +1,16 @@
 public class Car {
-    private final String number_car;
+    private final String numberCar;
 
-    protected String num_voyage;
-    protected String num_driver;
+    protected String numVoyage;
+    protected String numDriver;
+    protected boolean needFixUp = false;
 
-    Car(String number_car){
-        this.number_car = number_car;
+    Car(String numberCar){
+        this.numberCar = numberCar;
     }
 
-    protected String getNumber_car() {
-        return number_car;
+    protected String getNumberCar() {
+        return numberCar;
     }
 
 
