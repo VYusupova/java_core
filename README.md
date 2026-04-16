@@ -10,11 +10,39 @@
 
 <details>
 <summary>  выполненные задания и ключевые моменты в задании </summary>
+
+#### Задание 5. Отслеживание прогулок питомцев  
+- Программа вызвает метод `goToWalk()` у каждого питомца, каждый вызов метода `goToWalk()` выполняется асинхронно в отдельном потоке.
+- Программа  ждет выполнения всех вызовов метода `goToWalk()`, перед тем как завершиться и сделать печать информцации о прогулках.
+  [код готового решения](/AP1_Jv_T02/exercise5/src/main/java/s21/lymondka/Main.java)
+
+
+<details>
+<summary>  ТЕСТЫ </summary>
+  
+| Входные данные                                                                                                 | Выходные данные                                                                                              |
+|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| 3 <br/> dog <br/> Snowball <br/> 12 <br/> dog <br/> Snowball2 <br/> 10 <br/> dog <br/> Snowball3 <br/> 9 <br/> | Dog name = Snowball, age = 12 <br/> Dog name = Snowball2, age = 10 <br/> Dog name = Snowball3, age = 9 <br/> |
+| 3 <br/> dog <br/> Snowball <br/> 12 <br/> cat <br/> Kitty <br/> 10 <br/> dog <br/> Balloon <br/> 9 <br/>       | Dog name = Snowball, age = 12 <br/> Cat name = Kitty, age = 10 <br/> Dog name = Balloon, age = 9 <br/>       |
+| 3 <br/> hamster <br/> cat <br/> Kitty <br/> -10 <br/> cat <br/> Fura <br/> 9 <br/>                             | Incorrect input. Unsupported pet type <br/> Incorrect input. Age <= 0 <br/> Cat name = Fura, age = 9 <br/>    |
+
+</details>
   
 #### Задание 6. Итератор питомцев 
 - интерфейсе `BaseIterator` с шаблонным типом с описанием базовых методов  `next() hasNext() reset()`.
 - класс `AnimalIterator` с шаблонным типом `Animal`, который реализует интерфейс `BaseIterator`  
-  [код готового решения](AP1_JV_T02/exercise6/src/main/java/s21/lymondka/AnimalIterator.java)
+  [код готового решения](/AP1_Jv_T02/exercise6/src/main/java/s21/lymondka/Main.java)
+
+<details>
+<summary>  ТЕСТЫ </summary>
+  
+| Входные данные                                                                                                 | Выходные данные                                                                                              |
+|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| 3 <br/> dog <br/> Snowball <br/> 12 <br/> dog <br/> Snowball2 <br/> 10 <br/> dog <br/> Snowball3 <br/> 9 <br/> | Dog name = Snowball, age = 12 <br/> Dog name = Snowball2, age = 10 <br/> Dog name = Snowball3, age = 9 <br/> |
+| 3 <br/> dog <br/> Snowball <br/> 12 <br/> cat <br/> Kitty <br/> 10 <br/> dog <br/> Balloon <br/> 9 <br/>       | Dog name = Snowball, age = 12 <br/> Cat name = Kitty, age = 10 <br/> Dog name = Balloon, age = 9 <br/>       |
+| 3 <br/> hamster <br/> cat <br/> Kitty <br/> -10 <br/> cat <br/> Fura <br/> 9 <br/>                             | Incorrect input. Unsupported pet type <br/> Incorrect input. Age <= 0 <br/> Cat name = Fura, age = 9 <br/>    |
+
+</details>
 
 </details>
 
