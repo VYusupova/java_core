@@ -48,7 +48,7 @@ public class Main {
     public static double readDoubleNum(Scanner input){
         double num = 0;
 
-        while(true){
+        while(true){ // input.hasNext()
             try {
                 System.out.print("INPUT number :");
                 num = input.nextDouble();
