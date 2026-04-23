@@ -2,16 +2,11 @@ package s21.lymondka;
 /*
 Разработай математический модуль, который переводит секунды к формату hh:mm:ss находит, то есть находит количество часов, минут и секунд.
 
-Программа считывает секунды.
 Программа работает с целыми числами.
 Программа вычисляет и выводит количество часов, минут и секунд в формате hh:mm:ss.
 Если введено количество секунд меньше 0, то должно выводиться: «Incorrect time».
 Программа не завершается с ошибкой при некорректных входных данных. Она выводит: «Could not parse a number. Please, try again» и повторяет попытку ввода.
 Должна быть следующая структура программы:
-
-метод ввода;
-метод нахождения часов, минут и секунд;
-метод вывода.
 
 
 Все упомянутые выше методы должны вызываться из main.
@@ -32,9 +27,9 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int seconds = inputSeconds(scanner);
-        int[] time= calcTime_hhmmss (seconds);
-        output(time[0], time[1], time[2], (seconds < 0 ? false : true));
+        int seconds = inputSeconds(scanner); //Программа считывает секунды.
+        int[] time= calcTime_hhmmss (seconds); // метод нахождения часов, минут и секунд;
+        output(time[0], time[1], time[2], (seconds < 0 ? false : true)); // метод вывода
         scanner.close();
     }
 
