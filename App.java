@@ -175,3 +175,37 @@ class Map { /* ... */ }
 class Player { /* ... */ }
 class Level { /* ... */ }
 class BattleInfo { /* ... */ }
+
+
+
+import com.googlecode.lanterna.terminal.*;
+import com.googlecode.lanterna.screen.*;
+
+public class LanternaExample {
+    public static void main(String[] args) throws IOException {
+        // Создаём терминал (автоопределение типа через TerminalFacade)
+        Terminal terminal = TerminalFacade.createTerminal();
+
+        // Создаём экран поверх терминала
+        Screen screen = new Screen(terminal);
+
+        // Входим в приватный режим (очищает экран, сохраняет предыдущее состояние)
+        screen.startScreen();
+
+        // Устанавливаем цвет текста и фона
+        screen.setCharacter(10, 5, 'H', Terminal.Color.RED, Terminal.Color.BLACK);
+        screen.setCharacter(11, 5, 'e', Terminal.Color.RED, Terminal.Color.BLACK);
+        screen.setCharacter(12, 5, 'l', Terminal.Color.RED, Terminal.Color.BLACK);
+        screen.setCharacter(13, 5, 'l', Terminal.Color.RED, Terminal.Color.BLACK);
+        screen.setCharacter(14, 5, 'o', Terminal.Color.RED, Terminal.Color.BLACK);
+
+        // Обновляем экран
+        screen.refresh();
+
+        // Ждём нажатия клавиши
+        screen.readInput();
+
+        // Выходим из приватного режима (восстанавливает предыдущее состояние экрана)
+        screen.stopScreen();
+    }
+}
